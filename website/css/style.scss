@@ -1,0 +1,53 @@
+//theming
+
+$primary: #3C2F57;
+$secondary: #9374D7;
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$theme-colors: (
+    "primary": $primary,
+    "secondary": $secondary,
+);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-weight: 700;
+}
+
+//styling
+
+h1.header{
+    background-color: $secondary;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    width:auto;
+}
+
+.aboutme {
+    width:65%;
+    
+    +.imgframe{
+        display:inline;
+        width:40%;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: $secondary;
+
+        img{
+            width: 100%;
+            border-radius:4px;
+        }
+    }
+}
+
+.stepimg{
+    border: 5px solid $secondary; 
+    border-radius: 5px;
+    width: 100%;
+}

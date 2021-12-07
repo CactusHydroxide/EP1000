@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar").load("/EP1000/website/pages/components/navbar.html");
+        });
+        console.log('running')
+    </script>
+
+    <!-- Links -->
+    <!-- Bootstrap CSS -->
+    <link href="/EP1000/website/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div id='navbar'>
+        </div>
+
+        <div class='d-flex justify-content-around mt-2'>
+            <div class='px-2 text-dark aboutme'>
+                <h1 class="header">Info</h1>
+                <table class="table table-primary table-striped">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Name</th>
+                                <td>Clement Loy</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Course</th>
+                                <td>Diploma in Information Technology</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">School</th>
+                                <td>Singapore Polytechnic, School of Computing</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Instagram</th>
+                                <td>@cactus_keyboard</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </table>
+
+                <h1 class="header">Why I choose Digifab</h1>
+                <p>I choose digifab because it sounded very interesting. I can learn to 3D model, print and laser
+                    acrylic.
+                    These skills can help me in rapid prototyping in the future and I see them as very valuable assets
+                    in my
+                    arsenal.</p>
+
+                <h1 class='header'>More about me</h1>
+                <p>In my free time, I enjoy playing games and building keyboards. These are what I consider to be my
+                    favourite hobbies. I have spent a lot of money on my hobbies. Money that I will never see again. I
+                    do
+                    wish that one day i will be able to control my bad spending habits. Till that day comes I will carry
+                    on
+                    spending money.</p>
+            </div>
+
+            <div class='imgframe mx-3'><img src="../images/aboutme-pic.jpeg" alt="Me in a maid outfit"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
