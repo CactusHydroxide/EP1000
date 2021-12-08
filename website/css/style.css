@@ -11976,6 +11976,12 @@ a:hover {
   text-decoration: underline;
 }
 
+div.content {
+  width: 75%;
+  margin: auto;
+  margin-top: 5px;
+}
+
 h1.header, .header.h1 {
   text-decoration: underline;
 }
@@ -12001,5 +12007,13 @@ h1.header, .header.h1 {
   margin: auto;
   width: 75%;
   border: 2px solid #b0b0b0;
+}
+
+.blist {
+  padding-left: 0;
+}
+
+.blist > li {
+  list-style-type: none;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,1 +1,83 @@
-<h1 class="header">tools</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar").load("/EP1000/website/pages/components/navbar.html");
+        });
+        console.log(document.getElementById('index'))
+    </script>
+
+    <!-- Links -->
+    <!-- Bootstrap CSS -->
+    <link href="../bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/EP1000/website/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div id='navbar'>
+        </div>
+
+        <div class="content">
+            <h1 class="header">Tools</h1>
+            <p>Here are the tools I used for my projects.</p>
+
+            <table class="table table-bordered border-secondary">
+                <thead>
+                    <tr>
+                        <th scope="col">Application</th>
+                        <th scope="col">Usage</th>
+                        <th scope="col">Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Visual Studio Code</td>
+                        <td>Rich text editor used for code. Mainly used for website development</td>
+                        <td>Free software, customisable, already used for other projects.</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe Photoshop</td>
+                        <td>Raster image editor</td>
+                        <td>Industry standard software. Paid, but I have it for free from school.</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe Illustrator</td>
+                        <td>Vector image editor</td>
+                        <td>Industry standard software. Paid, but I have it for free from school.</td>
+                    </tr>
+                    <tr>
+                        <td>Snip & Sketch</td>
+                        <td>Screen capture tool</td>
+                        <td>Quick screen capture application. Comes pre-installed on Windows.</td>
+                    </tr>
+                    <tr>
+                        <td>Fusion 360</td>
+                        <td>Computer-assisted design (CAD) software</td>
+                        <td>Free software. Recommended by lecturer.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+
+        <!-- Active Nav -->
+</body>
+
+</html>

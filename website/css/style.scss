@@ -30,6 +30,12 @@ text-decoration: underline;
 
 //styling
 
+div.content{
+    width:75%;
+    margin:auto;
+    margin-top: 5px;
+}
+
 h1.header{
 text-decoration: underline;
 }
@@ -55,4 +61,11 @@ text-decoration: underline;
 margin:auto;
 width:75%;
 border: 2px solid $secondary
+}
+
+.blist {
+    padding-left: 0;
+    >li {
+    list-style-type: none;
+    }
 }
