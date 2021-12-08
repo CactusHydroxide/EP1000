@@ -11,14 +11,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(function () {
-            $("#navbar").load("/pages/components/navbar.html");
+            $("#navbar").load("/EP1000/website/pages/components/navbar.html");
         });
     </script>
 
     <!-- Links -->
     <!-- Bootstrap CSS -->
     <!-- <link href="../bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet"> -->
-    <link href="/css/style.css" rel="stylesheet">
+    <link href="/EP1000/website/css/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -26,15 +26,58 @@
         <div id='navbar'>
         </div>
 
-        <!-- container for steps -->
-        <div class='mt-3'>
-            <!-- steps template -->
-            <div class='w-75 mx-auto'>
-                <h1 class='bg-secondary p-2 text-white border rounded'>Step 1 - Set up</h1>
-                <img src="" />
-                <p>this are the steps required to make this step</p>
-            </div>
+        <div class='w-75 mx-auto mt-2'>
+            <h1 class="header">Computer Graphics</h1>
+            <h2><u>Contents</u></h2>
+            <ul>
+                <li><a href="#Intro">What is Computer Graphics?</a></li>
+                <li><a href="#VS">Raster VS Vector</a></li>
+                <li><a href="#Raster">Raster Graphics</a></li>
+                <li><a href="#Vector">Vector Graphics</a></li>
+            </ul>
+            <hr>
+
+            <h2 id='Intro'><u>What is Computer Graphics</u></h2>
+            <p>Computer graphics (CG) is images and graphics generated using the aid of a computer. CG has many uses
+                such as poster, logos, drawing and games. There are 2 main types of CG that is used. The first being
+                raster and the second being vector. Both types of graphics have their own usages and require different
+                software to produce. </p>
+            <hr>
+
+            <h2 id='vs'><u>Raster vs Vector</u></h2>
+            <p>Does raster and vector graphics really matter? What are their pros and cons? Images are images, why do
+                you think so much? These are some questions that you might have right now. In this section, I would
+                introduce what raster and vector images are, what are their similarities and what are their differences.
+            </p>
+            <p>The main difference between raster and vector images is in how they store the data of the image. In a
+                raster image, each individual pixel of an image is saved. Vector images on the other hand uses equations
+                to store the data of the images. What makes them so different you might ask? Since raster images save
+                the pixel, the amount of data in the file is fixed. If you zoom in too much or change the file
+                resolution, you would end up seeing the individual pixels of the image. On the other hand, since the
+                data of vector graphics are stored in equations, they can be zoomed in as much as you want without
+                losing any pixelation.</p>
+            <p>Does that mean that vector is superior to raster? No. Although vector images can be scaled infinitely,
+                they are harder to manipulate and are not easily readable but all devices. Raster images are better at
+                capturing data, for example through a camera or a screenshot, while vector images are better when
+                creating digital works that has to be upscaled and downscaled on the regular.</p>
+            <hr>
+
+            <h2 id='Raster'><u>Raster Graphics</u></h2>
+            <p>For raster graphics, I will be using photoshop to edit the images. For this image, I will be removing the
+                background and replacing it with another image.</p>
+            <h3>Step 1</h3>
+            <p>Load your image into the photoshop or your preferred raster image editing software. </p>
+
+            <hr>
+
+            <h2 id='Vector'><u>Vector Graphics</u></h2>
+            <p>Computer graphics (CG) is images and graphics generated using the aid of a computer. CG has many uses
+                such as poster, logos, drawing and games. There are 2 main types of CG that is used. The first being
+                raster and the second being vector. Both types of graphics have their own usages and require different
+                software to produce. </p>
+            <hr>
         </div>
+
 
 
 

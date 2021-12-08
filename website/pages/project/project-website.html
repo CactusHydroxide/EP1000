@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar").load("/EP1000/website/pages/components/navbar.html");
+        });
+        console.log(document.getElementById('index'))
+    </script>
+
+    <!-- Links -->
+    <!-- Bootstrap CSS -->
+    <link href="../bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/EP1000/website/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div id='navbar'>
+        </div>
+
+        <!-- content -->
+        <div class='w-75 mx-auto mt-2'>
+            <h1 class='header'>Website</h1>
+            <h2><u>Contents</u></h2>
+            <ul>
+                <li><a href="#Intro">Why make a website?</a></li>
+                <li><a href="#Why">Why did you create a website from scratch?</a></li>
+                <li><a href="#HTML">Basic HTML</a></li>
+                <li><a href="#Styling">Basic Styling</a></li>
+                <li><a href="#Styling2">Advance Styling</a></li>
+            </ul>
+            <hr>
+
+            <h2 id='Intro'><u>Why make a website?</u></h2>
+            <p>Developing this website serves multiple purpose. Firstly, it can help me develop my skills as a web
+                designer. Allowing me to practice my HTML and CSS/SASS skills. Secondly, it allows me to easily view my
+                projects at any time. If I would like to share my projects with others, I can navigate to this site to
+                show others what I have done. Lastly, this website serves as a learning resource for others who would
+                like to embark on their own journey into digital fabrication and rapid prototyping.</p>
+            <hr>
+
+            <h2 id='Why'><u>Why did you create a website from scratch?</u></h2>
+            <p>Creating my website from scratch gives me a lot of advantages in comparison to using a website builder
+                like wix. Firstly, creating my own website gives me the flexibility to create whatever I want. If I am
+                able to learn something I can code it into the webpage. However, a website builder only lets me use
+                their pre-existing templates and components that severely limit what I can do.</p>
+            <p>
+                Creating a website is also a good opportunity to familiarise myself with how webpages are built.
+                I have gained a better understanding on how the webpages I use on a daily basis work. This website
+                allows me
+                to appreciate all the hard work that has gone into the websites I view on a daily.</p>
+            <hr>
+
+            <h2 id='HTML'><u>Basic HTML</u></h2>
+            <p>This is my original website I made with basic HTML. It uses elements such as headers, list, paragraphs
+                and much more.</p>
+            <p>This video can help you learn about HTML: <a
+                    href="https://www.youtube.com/watch?v=0afZj1G0BIE&feature=youtu.be">Learn HTML in 12 minutes</a></p>
+            <p>This video can help you learn more about HTML: <a
+                    href="https://www.youtube.com/watch?v=KJ13lX20FqU">Learn more HTML in 12 minutes</a></p>
+            <div class=' w-75 mx-auto' style="height: 352px;""><iframe src=" /EP1000/website/media/index.html"
+                style='width: 100%;' height="350" class="border border-secondary"></iframe>
+                <p><i>This preview of the website is interactive, feel free to scroll and click it.</i></p>
+            </div><br>
+            <hr>
+
+            <h2 id='Styling'><u>Basic Styling</u></h2>
+            <p>There are 2 main ways of styling a HTML page. The first method is known as <i>inline styling</i>. Inline
+                styling is written inside the HTML file. The second method is using a Cascading Style Sheet, also known
+                as CSS. CSS is another type of file used to style HTML elements.</p>
+            <p>This video can help you learn about CSS: <a
+                    href="https://www.youtube.com/watch?v=0afZj1G0BIE&feature=youtu.be">Learn CSS in 12 minutes</a></p>
+            <div class=' w-75 mx-auto' style="height: 352px;""><iframe src=" /EP1000/website/media/indexcss.html"
+                style='width: 100%;' height="350" class="border border-secondary"></iframe>
+                <p><i>This preview of the website is interactive, feel free to scroll and click it.</i></p>
+            </div><br><br>
+            <p>I used CSS to style this webpage. I did so as CSS helps me better organise my website files. By
+                separating the files, I am able to better see the code that I am writing. Using CSS also gives me more
+                flexibility to change up the styles if I do not like it. I can link a different CSS file if I find the
+                original one too bland any time I wish without changing anything in the HTML file.</p>
+            <hr>
+
+            <h2 id='Styling2'><u>Advance Styling</u></h2>
+            <h3>Bootstrap</h3>
+            <p>There are 2 main types of addition styling I used for this webpage. First I used the <a
+                    href='https://getbootstrap.com/docs/5.0/getting-started/introduction/'>bootstrap</a> framework.
+                Bootstrap is a popular framework used to built webpages. It helps me reduce the time it takes to develop
+                and style
+                this website with its many classes. By adding classes to my webpage, I am able to quickly create my
+                navbar, tables and style my page with quick yet simple styling. </p>
+            <h3>SCSS</h3>
+            <p>The second addition styling feature I have in this webpage is Sassy CSS, also known as SCSS. SCSS is
+                similar to CSS, however it is much more powerful. I am able to set variables to help me quickly colour
+                my page. It also lets me nest different styles and classes to reduce the messy code that CSS can
+                generate. SCSS can also interact with Bootstrap by overwriting some of its defaults, allowing me to add
+                my own colour scheme into the webpage. You can read more about SCSS <a
+                    href="https://sass-lang.com/">here</a>.</p>
+        </div>
+
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+
+        <!-- Active Nav -->
+</body>
+
+</html>

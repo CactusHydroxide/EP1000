@@ -1,7 +1,7 @@
 //theming
 
-$primary: #3C2F57;
-$secondary: #9374D7;
+$primary: #202020;
+$secondary: #b0b0b0;
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 $theme-colors: (
@@ -19,14 +19,19 @@ h1{
     font-weight: 700;
 }
 
+a{
+    color: blue;
+    text-decoration: none;
+    &:hover{
+        color: blue;
+text-decoration: underline;
+    }     
+}
+
 //styling
 
 h1.header{
-    background-color: $secondary;
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    width:auto;
+text-decoration: underline;
 }
 
 .aboutme {
@@ -47,7 +52,7 @@ h1.header{
 }
 
 .stepimg{
-    border: 5px solid $secondary; 
-    border-radius: 5px;
-    width: 100%;
+margin:auto;
+width:75%;
+border: 2px solid $secondary
 }

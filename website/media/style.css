@@ -1,0 +1,46 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    background-color: gainsboro;
+}
+
+h1 {
+    font-size: 45px;
+}
+
+#iframenav {
+    float: left;
+    width: 18%;
+
+}
+
+#iframenav li {
+    list-style-type: square;
+}
+
+#iframenav ul {
+    padding-left: 20px;
+}
+
+#iframemain {
+    float: right;
+    width: 80%;
+}
+
+#iframefooter {
+    clear: both;
+    text-align: center;
+    padding: 3px;
+    background-color: gray;
+    color: white;
+    margin: 0;
+}
+
+#iframetitle {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    padding: 3px;
+    background-color: gray;
+    color: white;
+    margin: 0;
+}
