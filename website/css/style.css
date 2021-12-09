@@ -12004,9 +12004,9 @@ h1.header, .header.h1 {
 }
 
 .stepimg {
-  margin: auto;
+  border: #202020 solid 2px;
+  margin-bottom: 50px;
   width: 75%;
-  border: 2px solid #b0b0b0;
 }
 
 .blist {
