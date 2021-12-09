@@ -11983,7 +11983,8 @@ div.content {
 }
 
 h1.header, .header.h1 {
-  text-decoration: underline;
+  text-decoration: none;
+  padding: bottom 15px;
 }
 
 .aboutme {
@@ -12006,7 +12007,11 @@ h1.header, .header.h1 {
 .stepimg {
   border: #202020 solid 2px;
   margin-bottom: 50px;
-  width: 75%;
+  max-width: 75%;
+  max-height: 850px;
+  display: block;
+  -webkit-box-shadow: 3px 3px 3px #b0b0b0;
+          box-shadow: 3px 3px 3px #b0b0b0;
 }
 
 .blist {

@@ -37,7 +37,8 @@ div.content{
 }
 
 h1.header{
-text-decoration: underline;
+text-decoration: none;
+padding: bottom 15px;
 }
 
 .aboutme {
@@ -60,7 +61,10 @@ text-decoration: underline;
 .stepimg{
 border: $primary solid 2px;
 margin-bottom:50px;
-width:75%;
+max-width:75%;
+max-height: 850px;
+display: block;
+box-shadow: 3px 3px 3px #b0b0b0;
 }
 
 .blist {
