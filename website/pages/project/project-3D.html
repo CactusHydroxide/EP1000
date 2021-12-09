@@ -13,11 +13,12 @@
         $(function () {
             $("#navbar").load("/EP1000/website/pages/components/navbar.html");
         });
+        console.log(document.getElementById('index'))
     </script>
 
     <!-- Links -->
     <!-- Bootstrap CSS -->
-    <!-- <link href="../bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet"> -->
+    <link href="../bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
     <link href="/EP1000/website/css/style.css" rel="stylesheet">
 </head>
 
@@ -26,35 +27,144 @@
         <div id='navbar'>
         </div>
 
-        <!-- container for steps -->
-        <div class='mt-3 w-75 mx-auto'>
-            <!-- steps template -->
-            <h1 class='bg-secondary p-2 text-white border rounded'>Introduction</h1>
-            <div><img src="../../images/3D Modeling/IMG/One.png" class="stepimg w-25" /></div>
-            <p class='text-justify'>Contrary to popular belief, Lorem Ipsum is not simply
-                random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years
-                old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the
-                more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the
-                word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32
-                and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45
-                BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line
-                of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+        <div class="container">
+            <h1 class="header">3D Modelling & Printing
+            </h1>
+            <h2> Contents </h2>
+            <ul>
+                <li><a href="#Intro">What is 3D modelling?</a></li>
+                <li><a href="#Intro2">What is 3D printing?</a></li>
+                <li><a href="#How">How to create a 3D model?</a></li>
+                <ul>
+                    <li><a href="#part1">Part 1 - Setup</a></li>
+                    <li><a href="#part2">Part 2 - Base</a></li>
+                    <li><a href="#part3">Part 3 - Horse</a></li>
+                    <li><a href="#part4">Part 4 - Mane</a></li>
+                    <li><a href="#part5">Part 5 - Chamfer</a></li>
+                </ul>
+                <li><a href="#How2">How to print a 3D model?</a></li>
+            </ul>
 
-                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
-                Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
-                exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+            <h2 id='Intro'>What is 3D modelling?</h2>
+            <p>3D printing is a form of additive manufacturing that constructs a 3D object from a CAD model. It is
+                commonly used for rapid prototyping and creating small objects. It usually refers to the action of
+                depositing a material layer by layer until you have a finished product.</p>
+            <hr>
+
+            <h2 id='Intro2'>What is 3D printing?</h2>
+            <p>3D modelling is the process of using vertices, edges and surfaces to create a 3D model. It requires the
+                use of specialised applications to be done. 3D modelling has many purposes. Models can be used in art,
+                animation, games and event printed. We will be 3D modelling with the intent to print our models. </p>
+            <hr>
+
+            <h2 id='How'>How to create a 3D model?</h2>
+            <p>To learn how to 3D model, we will be making a chess knight piece. This knight piece will be 3D printed
+                later. </p>
+            <h2 id="part1">Part 1 - Setup</h2>
+            <h3>Step 1</h3>
+            <p>To start your model, we would need to define the size of our model. Press L (Shortcut to start a new
+                sketch) and select plane. </p>
+            <img src="../../images/3D Modeling/IMG/One.png" alt="" class='stepimg'>
+
+            <h3>Step 2</h3>
+            <p>Create rectangle with 2-point rectangle.</p>
+            <img src="../../images/3D Modeling/IMG/Two.png" alt="" class='stepimg'>
+
+            <h3>Step 3</h3>
+            <p>Use midpoint tool to select the bottom of the rectangle, and click the origin point to centre rectangle.
+                This helps to center the rectangle to the origin.
+            </p>
+            <img src="../../images/3D Modeling/IMG/Three.png" alt="" class='stepimg'>
+
+            <h3>Step 4</h3>
+            <p>Use sketch dimension to define the height and width of the rectangle. H:50 W:30. This helps to create a
+                reference for how large our model will be. When you are done it should look something like this.
+            </p>
+            <img src="../../images/3D Modeling/IMG/Four.png" alt="" class='stepimg'>
+
+            <h3>Step 5</h3>
+            <p>Look for a reference image. Using a reference image will make the process of modelling significantly
+                easier. If you are unable to find a reference image online, you can always draw it out on paper or using
+                any illustrative tool. Once you have a reference image, we will insert it into our canvas. To do so, go
+                to . Insert > Canvas > Insert from my computer, and search for your image. To insert canvas, click the
+                previously created rectangle. Flip and scale the reference image accordingly. </p>
+            <img src="../../images/3D Modeling/IMG/Five.png" alt="" class='stepimg'>
+            <img src="../../images/3D Modeling/IMG/Six.png" alt="" class='stepimg'>
+
+            <h3>Step 6</h3>
+            <p>Press the finish sketch button on top and hide rectangle. The rectangle is only used to scale the horse.
+                Finally, hide the sketch of the rectangle using the tree on the right.</p>
+            <img src="../../images/3D Modeling/IMG/Seven.png" alt="" class='stepimg'>
+
+            <h2 id="part2">Part 2 - Base</h2>
+            <h3>Step 1</h3>
+            <p>Create a new sketch and select a new plane to model the horse.</p>
+            <img src="../../images/3D Modeling/IMG/Eight.png" alt="" class='stepimg'>
+
+            <h3>Step 2</h3>
+            <p>Under the create tab, use the line, arc and spline tool to out line half of the knights base. Draw out
+                half of the knight's base.</p>
+            <img src="../../images/3D Modeling/IMG/Nine.png" alt="" class='stepimg'>
+
+            <h3>Step 3</h3>
+            <p>Select the base sketch. Press revolves. In the menu, select axis set the point of rotation to the y-axis.
+                Next, set the type to full. Lastly ensure that the operation creates a new body. Once you are done click
+                OK. Your base of the chest piece is complete.</p>
+            <img src="../../images/3D Modeling/IMG/Ten.png" alt="" class='stepimg'>
+
+            <h2 id="part3">Part 3 - Horse</h2>
+            <h3>Step 1</h3>
+            <p>Create new sketch and draw out the horse. It follows the same steps as sketching out the base. Take your
+                time as you go along the curves of the knight piece to get all the details. Leave the mane out as we
+                will be doing it separately.</p>
+            <img src="../../images/3D Modeling/IMG/Eleven.png" alt="" class='stepimg'>
+
+            <h3>Step 2</h3>
+            <p>Once you have finished the outline of the horse, select the extrude function. Follow the settings as
+                shown bellow. Take note of which measurement you choose. If you pick the first one, your distance refers
+                to the distance between the center and the side. If you choose the second one, the distance is the
+                thickness of the entire structure. Lastly, remember to set the operation to join as this top piece is
+                going to attach to the base.</p>
+            <img src="../../images/3D Modeling/IMG/Twelve.png" alt="" class='stepimg'>
+
+            <h3>Step 3</h3>
+            <p>Next, create a new sketch on the surface of the ears. On that surface, draw out how you would like the
+                ears to look. Lastly, use the extrude function to remove the excess. Remember to set the distance as a
+                negative number and set the operation to cut.</p>
+            <img src="../../images/3D Modeling/IMG/Thirteen .png" alt="" class='stepimg'>
+            <img src="../../images/3D Modeling/IMG/Fourteen.png" alt="" class='stepimg'>
+            <img src="../../images/3D Modeling/IMG/Fifteen.png" alt="" class='stepimg'>
+
+            <h3>Step 4</h3>
+            <p>Lastly remove the excess on the top of the horses ear/</p>
+            <img src="../../images/3D Modeling/IMG/Sixteen .png" alt="" class='stepimg'>
+
+
+            <h2 id="part4">Part 4 - Mane</h2>
+            <h3>Step 1</h3>
+            <p>Create a new sketch of the mane of the horse. As previously done.</p>
+            <img src="../../images/3D Modeling/IMG/Seventeen.png" alt="" class='stepimg'>
+
+            <h3>Step 2</h3>
+            <p>Using the extrude function, do the same as before. Do remember to keep the distance thinner than the body
+                of the horse, and set the operation back to join.</p>
+            <img src="../../images/3D Modeling/IMG/Eighteen.png" alt="" class='stepimg'>
+
+
+            <h2 id="part5">Part 5 - Chamfer</h2>
+            <h3> Step 1</h3>
+            <p>Next we will chamfer the edges to make the horse look better. Select all the edge that you would like to
+                chamfer.</p>
+            <img src="../../images/3D Modeling/IMG/Nineteen.png" alt="" class='stepimg'>
+            <h3> Step 2</h3>
+            <p>Use the chamfer function. You can play with the incline of the edge to have it be to your liking.</p>
+            <img src="../../images/3D Modeling/IMG/Twenty.png" alt="" class='stepimg'>
+
+            <h3>Final Product</h3>
+            <p>Viola! Your 3D model of a knight piece is done. This is how mine looks like</p>
+            <i>Insert fusion360 embed here</i>
+            <hr>
         </div>
-
-        <!-- <div class='mt-3'>
-            <div class='w-75 mx-auto'>
-                <h1 class='bg-secondary p-2 text-white border rounded'>Step 1 - Set up</h1>
-                <div class='row w-100 mx-auto'>
-                    <img src="../../images/3D Modeling/IMG/One.png" class="stepimg w-50 col" />
-                    <p class='col'>this are the steps required to make this step</p>
-                </div>
-            </div>
-        </div> -->
-
 
 
         <!-- Bootstrap JS -->
@@ -64,6 +174,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
             integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
             crossorigin="anonymous"></script>
+
+        <!-- Active Nav -->
 </body>
 
 </html>
