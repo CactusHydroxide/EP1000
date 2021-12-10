@@ -13,7 +13,9 @@
         $(function () {
             $("#navbar").load("/EP1000/website/pages/components/navbar.html");
         });
-        console.log(document.getElementById('index'))
+        $(function () {
+            $("#returntop").load("/EP1000/website/pages/components/returntop.html");
+        });
     </script>
 
     <!-- Links -->
@@ -26,10 +28,13 @@
     <div>
         <div id='navbar'>
         </div>
+        <div id='returntop'>
+        </div>
 
         <div class="content">
             <h1 class="header">Laser Cutting</h1>
 
+            <h2>Contents</h2>
             <ul>
                 <li><a href="#Intro">What is Laser Cutting?</a></li>
                 <li><a href="#Design">Laser Cutting - Designing</a></li>
@@ -38,19 +43,83 @@
             <hr>
 
             <h2 id="Intro">What is Laser Cutting?</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellat facilis dicta non perspiciatis
-                magni reiciendis explicabo, adipisci temporibus quisquam dolorum, quia dolor illo. Quas aliquid aperiam
-                nam ipsam unde!</p>
+            <p>Laser Cutting is the process of using a high power laser with pin point precision to cut sheets of
+                material. It allowed you to be able to cut sheets of material very precisely. It also allows you to be
+                able to engrave in the material. This gives you a lot of flexibility on your design. </p>
             <hr>
             <h2 id='Design'>Laser Cutting - Designing</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellat facilis dicta non perspiciatis
-                magni reiciendis explicabo, adipisci temporibus quisquam dolorum, quia dolor illo. Quas aliquid aperiam
-                nam ipsam unde!</p>
+            <p>The laser cutting machine requires a <a href="./project-cg.html#Vector">Vector image</a> file to know
+                what it is going to cut. The colours of the graphic refers to different laser cutting settings. For this
+                project we will be using 2 colours, red and black. Red will refer to cutting and black will refer to
+                engraving.</p>
+            <p>I will be using Adobe Illustrator to create my vector file. The design we will be making is that of a
+                keychain with a QR code. Before we start, make sure you have a reference image ready for your QR code,
+                or any design you would like to create.</p>
+            <h3>Step 1</h3>
+            <p>First we have to set up our AI file. When creating a new file, ensure that you create it with the
+                dimensions of 10 x 10 cm. Colour mode and raster effects would not affect the file so do not worry too
+                much about them. However, most would prefer to set Colour Mode to RGB.</p>
+            <img src="../../images/Laser Cutting/One.png" alt="" class='stepimg'>
+            <h3>Step 2</h3>
+            <p>Next, insert your reference image into your file. Adjust the size of the reference image to 3.5cm x 3.5cm
+                Once you have done so, center it on the page and lock
+                it on the layer window. (Use F7 to bring up the layers window)</p>
+            <img src="../../images/Laser Cutting/Two.png" alt="" class='stepimg'>
+            <h3>Step 3</h3>
+            <p>Now, we need to convert, this raster image to a vector graphic. However, due to the nature of the QR
+                code, we do not need to convert it to a vector. If you are using another raster image, do look at <a
+                    href='./project-cg.html#Vector'>Vector Graphic</a> to learn more.</p>
+            <h3>Step 4</h3>
+            <p>Next we will be draw the outline of the keychain. Use the curve rectangle tool to draw a 4cm x 4cm
+                square. You can left click while selecting the tool to choose the exact measurements of the rectangle.
+            </p>
+            <img src="../../images/Laser Cutting/Three.png" alt="" class='stepimg'>
+            <h3>Step 5</h3>
+            <p>Once you have the outline, use the colour selection at the bottom to change the colour of the rectangle.
+                Set the outline of the rectangle to red and remove the fill of the rectangle. Lastly, center the
+                rectangle on the artboard.</p>
+            <img src="../../images/Laser Cutting/Four.png" alt="" class='stepimg'>
+            <h3>Step 6</h3>
+            <p>Now create 2 circles. They should have width and height of 1cm and 0.5cm respectively. Center the smaller
+                circle inside the larger one and overlap them with the top of your keychain. It should look as follows.
+            </p>
+            <img src="../../images/Laser Cutting/Five.png" alt="" class='stepimg'>
+            <h3>Step 7</h3>
+            <p>We will now be merging all the shapes together. Select only the outer circle and the rectangle and use
+                the unite tool to merge both shapes. You can see which shape mode I used on
+                the top left. If you do not see the pathfinder tab, press Ctrl + Shift + F9 to open it.
+            </p>
+            <img src="../../images/Laser Cutting/Six.png" alt="" class='stepimg'>
+            <h3>Step 8</h3>
+            <p>Next, select the smaller circle and the outer shape. Then use the minus front tool to cut out the smaller
+                circle from the main shape. Again, you can see the tool used on the top right
+            </p>
+            <img src="../../images/Laser Cutting/Seven.png" alt="" class='stepimg'>
+            <h3>Step 9</h3>
+            <p>Lastly, select the newly merged shapes and set the thickness to 0.25px. This will ensure that the cut
+                will be as thin as possible.
+            </p>
+            <img src="../../images/Laser Cutting/Eight.png" alt="" class='stepimg'>
+            <h3>Step 10</h3>
+            <p>To make the engraving nicer, we would want to engrave on the back of the acrylic sheet. Select
+                everything, right click > transform > reflect vertically. This will flip the design and prepare it for
+                cutting.
+            </p>
+            <img src="../../images/Laser Cutting/Nine.png" alt="" class='stepimg'>
+            <h3>Step 11</h3>
+            <p>Ensure that you save your file as a vector. Save it as a AI, SVG or PDF. Ensure that your laser cutting
+                is able to take your vector file format as an input.
+            </p>
+            <img src="../../images/Laser Cutting/Nine.png" alt="" class='stepimg'>
+            <h3>Final Product</h3>
+            <p>You have not created a design to be laser cut! Your design should look as shown below! You may also
+                download the file below to cut for yourself!
+            </p>
+            <iframe src="../../images/Laser Cutting/QRfinal.pdf" width='500' height="520"></iframe>
             <hr>
             <h2 id='Cut'>Laser Cutting - Cutting</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos repellat facilis dicta non perspiciatis
-                magni rkkjjeiciendis explicabo, adipisci temporibus quisquam dolorum, quia dolor illo. Quas aliquid aperiam
-                nam ipsam unde!</p>
+            <p></p>
+
             <hr>
 
         </div>
