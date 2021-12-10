@@ -12052,12 +12052,14 @@ h1.header, .header.h1 {
   width: 40%;
   padding: 5px;
   border-radius: 5px;
-  background-color: #b0b0b0;
 }
 
 .aboutme + .imgframe img {
   width: 100%;
   border-radius: 4px;
+  border-width: 4px;
+  border-color: #b0b0b0;
+  border-style: solid;
 }
 
 .stepimg {
