@@ -11959,8 +11959,14 @@ fieldset:disabled .btn {
   }
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
+  min-height: 100%;
+  position: relative;
 }
 
 h1, .h1 {
@@ -12012,10 +12018,23 @@ a:hover {
   color: #202020;
 }
 
+#footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#footer p {
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 0px;
+}
+
 div.content {
   width: 75%;
   margin: auto;
-  margin-top: 5px;
+  padding-top: 5px;
+  padding-bottom: 20px;
 }
 
 h1.header, .header.h1 {

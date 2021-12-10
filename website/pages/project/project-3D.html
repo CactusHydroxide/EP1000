@@ -16,6 +16,9 @@
         $(function () {
             $("#returntop").load("/EP1000/website/pages/components/returntop.html");
         });
+        $(function () {
+            $("#footer").load("/EP1000/website/pages/components/footer.html");
+        });
     </script>
 
     <!-- Links -->
@@ -46,7 +49,7 @@
                     <li><a href="#part4">Part 4 - Mane</a></li>
                     <li><a href="#part5">Part 5 - Chamfer</a></li>
                 </ul>
-                <li><a href="#How2">How to print a 3D model?</a></li>
+                <li><a href="#print">My experience printing a 3D model.</a></li>
             </ul>
 
             <h2 id='Intro'>What is 3D modelling?</h2>
@@ -166,8 +169,40 @@
 
             <h3>Final Product</h3>
             <p>Viola! Your 3D model of a knight piece is done. This is how mine looks like</p>
-            <i>Insert fusion360 embed here</i>
+            <iframe style="display:block;"
+                src="https://ichat2704.autodesk360.com/shares/public/SH9285eQTcf875d3c539a352ac593099093a?mode=embed"
+                width="800" height="600" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+                frameborder="0"></iframe>
+            <p><i>This is the 3D model of my horse.</i></p>
+            <a class='btn btn-info' href='../../images/3D Modeling/Knight Piece_Clement Loy.3mf'
+                download='KnightPiece.3mf'>Download
+                file</a>
             <hr>
+            <h2 id='print'>My experience printing a 3D model</h2>
+            <p>First I brought my 3D model into my slicer. A slicer preps the model to be printed and converts the file
+                into something the printer can read. Here are the settings I used. Remember to use supports to ensure
+                that your print does not sag.</p>
+            <img src="" alt="slicer" class="stepimg">
+            <p>After slicing, I moved my print file into a SD card and inserted it into the 3D printer. Select it on the
+                printer and I got to printing. </p>
+            <img src="../../images/3D Modeling/print/printing.jpeg" alt="" class='stepimg'>
+            <p><i>Printer going brrrr</i></p>
+            <img src="../../images/3D Modeling/print/printdone.jpg" alt="" class='stepimg'>
+            <p>This is my print after it was done printing.</p>
+            <p>Once your print is done, it is time for the tedious process of removing the supports. I used some wire
+                cutters, some skinny pliers and a lot of elbow grease to remove as much of the supports as I could. </p>
+            <img src="../../images/3D Modeling/print/printsupport (1).jpeg" alt="" class='stepimg'>
+            <img src="../../images/3D Modeling/print/printsupport (2).jpeg" alt="" class='stepimg'>
+            <img src="../../images/3D Modeling/print/printsupport (3).jpeg" alt="" class='stepimg'>
+            <p>It was a long process of removing the supports but I eventually got most of it off.</p>
+            <img src="../../images/3D Modeling/print/printremove.jpeg" alt="" class='stepimg'>
+            <p>After roughly removing the supports, I started to stand and buff the model. I used some sandpaper and
+                files to remove all the piece of supports that I could not with the previous tools. Removing the
+                supports is a long and tedious process. I attempted to smoothen the base but I realised that it was too
+                long a process and stopped before I lost my sanity</p>
+            <img src="../../images/3D Modeling/print/printfinal.JPG" alt="" class='stepimg'>
+            <p>To make it smoother, one would have to prime and paint the model but I do not have the time nor money to
+                do so unfortunately.</p>
         </div>
 
 
@@ -180,6 +215,9 @@
             crossorigin="anonymous"></script>
 
         <!-- Active Nav -->
+
+        <div id='footer'>
+        </div>
 </body>
 
 </html>
