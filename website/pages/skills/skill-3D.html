@@ -49,17 +49,26 @@
                     <li><a href="#part4">Part 4 - Mane</a></li>
                     <li><a href="#part5">Part 5 - Chamfer</a></li>
                 </ul>
+                <li><a href="#para">Parametric Modelling</a></li>
+                <ul>
+                    <li><a href="#para_what">What is parametric modelling?</a></li>
+                    <li><a href="#para_why">Why use parametric modelling?</a></li>
+                    <li><a href="#para_how">How to make a parametric model?</a></li>
+                    <li><a href="#para_example">Examples of parametric models at work</a></li>
+                </ul>
                 <li><a href="#print">My experience printing a 3D model.</a></li>
             </ul>
 
             <h2 id='Intro'>What is 3D modelling?</h2>
             <p>3D modelling is the process of using vertices, edges and surfaces to create a 3D model. It requires the
-                use of specialised applications to be done. 3D modelling serves many purposes. Models can be used in art,
+                use of specialised applications to be done. 3D modelling serves many purposes. Models can be used in
+                art,
                 animation, games and even printed. We will be 3D modelling with the intent to print our models.</p>
             <hr>
 
             <h2 id='Intro2'>What is 3D printing?</h2>
-            <p>Usually referring to the action of depositing a material layer by layer until you have a finished product,
+            <p>Usually referring to the action of depositing a material layer by layer until you have a finished
+                product,
                 3D printing is a form of additive manufacturing that constructs a 3D object from a CAD model. It is
                 commonly used for rapid prototyping and creating small objects.</p>
             <hr>
@@ -78,7 +87,8 @@
             <img src="../../images/3D Modeling/IMG/Two.png" alt="" class='stepimg'>
 
             <h3>Step 3</h3>
-            <p>Use midpoint tool to select the bottom of the rectangle, and click the origin point to centre the rectangle.
+            <p>Use midpoint tool to select the bottom of the rectangle, and click the origin point to centre the
+                rectangle.
                 This helps to center the rectangle to the origin.
             </p>
             <img src="../../images/3D Modeling/IMG/Three.png" alt="" class='stepimg'>
@@ -176,7 +186,67 @@
             <p><i>This is the 3D model of my horse. You can download the model <a class=''
                         href='../../images/3D Modeling/Knight Piece_Clement Loy.3mf' download='KnightPiece.3mf'>here
                         file</a>.</i></p>
+            <p>Next, we would be going through some advance tips and tricks when it comes to 3D modelling.</p>
 
+            <hr>
+            <h2 id="para">Parametric Modelling</h2>
+            <h3 id="para_what">What is parametric modelling?</h3>
+            <p>Parametric modelling is 3D modelling with the use of pre-programmed measurements and algorithms as
+                measurements
+                and functions. These rules and algorithms are known as parameters. You can think of them as variable in
+                code or letters in algebra. They are used to reference a specific value or action.</p>
+            <h3 id="para_why">Why use parametric modelling?</h3>
+            <p>Parametric modelling allows one to quickly change the parameters on the fly. By changing the parameters,
+                values and measurements can be changed across the entire model as long as they are properly referenced.
+                For example, if you created a model of a box but you want the width to be longer. In direct modelling
+                you are required to change the width for every time the value is used in the model. However, when
+                utilising parametric models, as long as you have referenced your parameters, you can change the
+                parameters to change the values of all 'widths' at the same time.</p>
+            <hr>
+            <h3 id="para_how">How to make a parametric model?</h3>
+            <p>Before you start modelling, you are first required to set up parameters. To do so select change
+                parameters under modify. (Make sure you are not in a sketch first else you cannot find it).</p>
+            <img src="../../images/Parametric Box/1.png" alt="" class="stepimg">
+            <p>To add parameters, click on the plus button beside user parameters. Next, add a name, unit (if
+                applicable) and expression
+                into the parameter. The expression could be a single value or a complex algorithm to find any value. The
+                value tab should fill up automatically. Comments are optional but it is highly advised that you do so to
+                remember what the parameters are used for.</p>
+            <img src="../../images/Parametric Box/2.png" alt="" class="stepimg">
+            <p><i>This is the parameters I used for my music box. The box will show up in a few places in this website
+                    so keep your eyes peeled!</i></p>
+            <p>Lastly, ensure that ALL measurements when modelling, reference the parameters instead of a fixed value.
+                Created a
+                fixed valued leads to the problem resizing different parts of the box will not work as intended later.
+            </p>
+            <img src="../../images/Parametric Box/3.png" class='stepimg' alt="">
+            <img src="../../images/Parametric Box/4.png" class='stepimg' alt="">
+            <p><i>Take note that my height, width and thickness are all parameters instead of values.</i></p>
+            <p>You can also use parameters as the measurements of guides. To do so, just set the measurements of your
+                guide lines to the name of the parameter instead of using a defined value.</p>
+            <img src="../../images/Parametric Box/26.png" alt="" class="stepimg">
+            <img src="../../images/Parametric Box/27.png" alt="" class="stepimg">
+            <img src="../../images/Parametric Box/28.png" alt="" class="stepimg">
+            <img src="../../images/Parametric Box/29.png" alt="" class="stepimg">
+            <p><i>As you can see, both the square and thickness of the circle are using parameters to help define its
+                    value. This allows me to resize them later depending on the sizing of my box.</i></p>
+            <h3 id="para_example">Examples of parametric models at work</h3>
+            <p>Here I will show how parametric modelling can change my model by changing its parameters. This is a box I
+                modelled using parameters. </p>
+            <img src="../../images/Parametric Box/2.png" alt="" class="stepimg">
+            <p><i>These are the original parameters</i></p>
+            <img src="../../images/Parametric Box/Final.png" alt="" class="stepimg">
+            <p><i>This is how the box looks originally.</i></p>
+            <p>I realised that the box looked <b>really</b> ugly like this so I decided to change up some of the
+                measurements. Under modify > change parameters, I changed my original parameters until I was satisfied
+                with the new look.</p>
+            <img src="../../images/Parametric Box/newparams.jpg" alt="" class="stepimg">
+            <p><i>These are the new parameters</i></p>
+            <img src="../../images/Parametric Box/Final Better.png" alt="" class="stepimg">
+            <p><i>This is how the new box looks</i></p>
+            <p>Turns out I got my height and width mixed up, creating a tall, but skinny looking box. Thankfully, I am
+                able to easily change the parameters to adjust the measurements of the box. It would have been a
+                disaster to change it manually.</p>
             <hr>
             <h2 id='print'>My experience printing a 3D model</h2>
             <p>First I brought my 3D model into my slicer. A slicer preps the model to be printed and converts the file
@@ -207,7 +277,8 @@
                 supports is a long and tedious process. I attempted to smoothen the base but I realised that it was too
                 long a process and stopped before I lost my sanity</p>
             <img src="../../images/3D Modeling/print/printfinal.JPG" alt="" class='stepimg'>
-            <p>To make it smoother, one would have to prime and paint the model but I unfortunately do not have the time nor money to
+            <p>To make it smoother, one would have to prime and paint the model but I unfortunately do not have the time
+                nor money to
                 do so.</p>
         </div>
 
