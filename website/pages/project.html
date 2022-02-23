@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $("#navbar").load("/EP1000/website/pages/components/navbar.html");
+        });
+        $(function () {
+            $("#returntop").load("/EP1000/website/pages/components/returntop.html");
+        });
+        $(function () {
+            $("#footer").load("/EP1000/website/pages/components/footer.html");
+        });
+    </script>
+
+    <!-- Links -->
+    <!-- Bootstrap CSS -->
+    <link href="../bootstrap-5.0.2-dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/EP1000/website/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div>
+        <div id='navbar'>
+        </div>
+        <div id='returntop'>
+        </div>
+
+        <div class="content">
+            <h1 class="header">EP1000 Project</h1>
+            <h2> Contents </h2>
+            <ul>
+                <li><a href="#Intro">Introduction</a></li>
+                <li><a href="#Materials">Materials</a></li>
+                <li><a href="#Idea">Project Ideation</a></li>
+                <li><a href="#Elec">Electronics</a></li>
+                <ul>
+                    <li><a href="#Wires">Circuit</a></li>
+                    <li><a href="#Code">Code</a></li>
+                </ul>
+                <li><a href="#Model">Modelling</a></li>
+                <li><a href="#Print">3D Printing</a></li>
+                <li><a href="#Cut">Laser Cutting</a></li>
+                <li><a href='#Final'>Final Product</a></li>
+                <li><a href='#Down'>Downloads</a></li>
+            </ul>
+
+
+            <h2 id='Intro'>Introduction</h2>
+            <p>This page is dedicated to documenting my final project of EP1000. I would be going through the ideation
+                and design process of how I build my project. This is a step by step guide on how to make this project.
+                Feel free to follow along to also build your own light clock. Downloads for the files will be included
+                bellow.
+            </p>
+            <hr>
+
+            <h2 id='Material'>Material</h2>
+            <p>Here will be a list of materials needed for the project:</p>
+            <ul>
+                <ol>NeoPixel RGB LED Strip. (At least 24 bulbs)</ol>
+                <ol>7 Segment Display - TM1637</ol>
+                <ol>3 Push Buttons</ol>
+                <ol>1 Switch</ol>
+                <ol>1 DC-in port</ol>
+                <ol>Arduino Nano x1</ol>
+                <ol>Some pieces of transparent acrylic</ol>
+                <ol>3D printing filament</ol>
+            </ul>
+
+            <hr>
+            <h2 id='Idea'>Project Ideation</h2>
+            <p>Here are some sketches used to help visualise the concept of the project</p>
+            <img class='stepimg'
+                src="../images/Picture/anime-lumine-genshin-impact-beach-sweetheart-school-uniform-wet-clothing-hd-wallpaper-preview.jpg"
+                alt="">
+            <p><i>These are the sketches from the ideation phase.</i></p>
+            <img class='stepimg'
+                src="../images/Picture/anime-lumine-genshin-impact-beach-sweetheart-school-uniform-wet-clothing-hd-wallpaper-preview.jpg"
+                alt="">
+            <p><i>This is the final chosen idea drawn to scale(????)</i></p>
+
+            <hr>
+            <h2 id="#Elec">Electronics</h2>
+            <p>In this section, we will be going through all the circuitry and code used to make the project run.</p>
+            <h3 id="Wires">Circuit</h3>
+            <p>Here is the circuit diagram of my project. Take note of what pins the individual components are connected
+                to. The 7 Segment Display (TM1637) is connected to pins 2, 3, +5v and ground. The NeoPixel Strip is
+                connected to 4 and ground. The Push buttons are connected to 5, 6 and 7 respectively. Lastly, the DC
+                power is connected to the VIN pin.</p>
+            <img class='stepimg'
+                src="../images/Picture/anime-lumine-genshin-impact-beach-sweetheart-school-uniform-wet-clothing-hd-wallpaper-preview.jpg"
+                alt="">
+
+            <p>Before working with my Arduino Nano, I used a Arduino Uno to test the code and circuit. This is because
+                the Uno has pre soldered female headers, making it easy to quickly test my circuit with ribbon cables.
+                This prevent me from needing to solder anything before I was confident that my circuit would work.</p>
+            <img src="../images/Picture/anime-lumine-genshin-impact-beach-sweetheart-school-uniform-wet-clothing-hd-wallpaper-preview.jpg"
+                alt="" id="stepimg">
+
+
+            <h3 id="Code">Code</h3>
+            <p>The code for the project was written in Arduino IDE. I used 3 libraries in the embeded program. The first
+                is Adafruit Neopixel. This library allows me to control the Neopixel LED strip and have them display
+                different designs and pattern. The second library is TM1637Display. It allows me to quickly and easily
+                display txet on Tm1637 7Segment display. The last library is the Arduino library. Without it you would
+                not be able to properly program and Arduino circuit.</p>
+            <hr />
+
+            <h2 id="Model">Modelling</h2>
+            <p>Using fusion 360, I modelled the clock. There is 3 main components to the clock. First it is the front
+                face. It will be the design of the display. The second is the body. It is used to house the components.
+                Lastly, it is the back. The back will contain multiple buttons and components to facilitate the
+                operation of the clock. On top of the main components, there is also a stand. The stand keeps the clock
+                at a optimal viewing angle when placed on a table.</p>
+            <i>Insert 3 img for front back and body</i>
+            <i>Insert 3D model</i>
+            <hr />
+
+            <h2 id="#Print">3D Printing</h2>
+            <p>I printed the body of the clock. It was sliced specifically for the school printer. The settings used are
+                as follows:</p>
+            <ul>
+                <li>0.3mm Layer Height</li>
+                <li>60mm/s</li>
+                <li>10% infill</li>
+            </ul>
+            <p>The image I took of the print was corrupted thus I cannot show it. However here is some pictures of the
+                final product where you can see it. It is the purple layer in the center sandwiched between the acrylic
+                layers.</p>
+
+            <p>I printed hte stand of the clock out of school with the help of a friend. The printer used is a Ender 3
+                v2. The setting used was:</p>
+            <ul>
+                <li>0.2mm Layer Height</li>
+                <li>80mm/s</li>
+                <li>10% infill</li>
+            </ul>
+            <p>Here is some images of the stand.</p>
+
+            <hr />
+            <h2 id="#Cut">Laser Cutting</h2>
+            <p></p>
+        </div>
+        <!-- Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+            integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous"></script>
+
+        <!-- Active Nav -->
+
+        <div id='footer'>
+        </div>
+
+</body>
+
+</html>
