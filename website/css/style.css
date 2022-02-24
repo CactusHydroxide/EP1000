@@ -12088,7 +12088,12 @@ h1.header, .header.h1 {
   margin-right: 15px;
 }
 
-pre {
-  background-color: turquoise;
+.codeblock {
+  border: #202020 solid 2px;
+  margin-bottom: 30px;
+  max-width: 75%;
+  display: block;
+  -webkit-box-shadow: 3px 3px 3px #b0b0b0;
+          box-shadow: 3px 3px 3px #b0b0b0;
 }
 /*# sourceMappingURL=style.css.map */
