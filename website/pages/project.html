@@ -50,8 +50,12 @@
                 <li><a href="#Print">3D Printing</a></li>
                 <li><a href="#Cut">Laser Cutting</a></li>
                 <li><a href='#Final'>Final Product</a></li>
+                <ul>
+                    <li><a href="#Features">Features</a></li>
+                </ul>
                 <li><a href='#Reflect'>Reflection</a></li>
                 <li><a href='#Down'>Downloads</a></li>
+
             </ul>
 
 
@@ -63,48 +67,64 @@
             </p>
             <hr>
 
-            <h2 id='Material'>Material</h2>
+            <h2 id='Materials'>Material</h2>
             <p>Here will be a list of materials needed for the project:</p>
             <ul>
-                <ol>NeoPixel RGB LED Strip. (At least 24 bulbs)</ol>
-                <ol>7 Segment Display - TM1637</ol>
-                <ol>3 Push Buttons</ol>
-                <ol>1 Switch</ol>
-                <ol>1 DC-in port</ol>
-                <ol>Arduino Nano x1</ol>
-                <ol>Some pieces of transparent acrylic</ol>
-                <ol>3D printing filament</ol>
+                <li>NeoPixel RGB LED Strip. (At least 24 bulbs)</;>
+                <li>7 Segment Display - TM1637</li>
+                <li>3 Push Buttons</li>
+                <li>1 Switch</li>
+                <li>1 DC-in port</li>
+                <li>Arduino Nano x1</li>
+                <li>Some pieces of transparent acrylic</li>
+                <li>3D printing filament</li>
             </ul>
 
             <hr>
             <h2 id='Idea'>Project Ideation</h2>
-            <p>Here are some sketches used to help visualise the concept of the project</p>
-            <img class='stepimg'
-                src="../images/Picture/anime-lumine-genshin-impact-beach-sweetheart-school-uniform-wet-clothing-hd-wallpaper-preview.jpg"
-                alt="">
-            <p><i>These are the sketches from the ideation phase.</i></p>
-            <img class='stepimg'
-                src="../images/Picture/anime-lumine-genshin-impact-beach-sweetheart-school-uniform-wet-clothing-hd-wallpaper-preview.jpg"
-                alt="">
-            <p><i>This is the final chosen idea drawn to scale(????)</i></p>
+            <p>With the advice of my lecturer, Rodney Dorville, I decided that I would make a clock for my final
+                project. After some brainstorming, I came up with the idea of using a LED strip to show the time. I
+                initially wanted to use the Light to represent the Hour and Minutes, but concluded that it is a very
+                generic idea. In the end, I made the outer ring of the clock using LEDs and have them show the seconds
+                using brightness, and show the hours and mins on a seven segment display.</p>
+            <p>Here are some early sketches of my design.</p>
+            <div class="d-flex flex-wrap">
+                <img class='stepimg' src="../images/FinalProj/Idea.JPG" style="margin-right:15px">
+                <img class='stepimg' src="../images/FinalProj/Idea2.JPG" alt="" style="margin-right:15px">
+                <img class='stepimg' src="../images/FinalProj/Idea3.JPG" alt="">
+            </div>
 
             <hr>
-            <h2 id="#Elec">Electronics</h2>
+            <h2 id="Elec">Electronics</h2>
             <p>In this section, we will be going through all the circuitry and code used to make the project run.</p>
             <h3 id="Wires">Circuit</h3>
             <p>Here is the circuit diagram of my project. Take note of what pins the individual components are connected
                 to. The 7 Segment Display (TM1637) is connected to pins 2, 3, +5v and ground. The NeoPixel Strip is
                 connected to 4 and ground. The Push buttons are connected to 5, 6 and 7 respectively. Lastly, the DC
                 power is connected to the VIN pin.</p>
-            <img class='stepimg'
-                src="../images/Picture/anime-lumine-genshin-impact-beach-sweetheart-school-uniform-wet-clothing-hd-wallpaper-preview.jpg"
-                alt="">
+            <img class='stepimg' src="../images/FinalProj/Circuit.jpg" alt="">
 
-            <p>Before working with my Arduino Nano, I used a Arduino Uno to test the code and circuit. This is because
-                the Uno has pre soldered female headers, making it easy to quickly test my circuit with ribbon cables.
-                This prevent me from needing to solder anything before I was confident that my circuit would work.</p>
-            <img src="../images/Picture/anime-lumine-genshin-impact-beach-sweetheart-school-uniform-wet-clothing-hd-wallpaper-preview.jpg"
-                alt="" id="stepimg">
+            <div class="row w-75">
+                <p>Before working with my Arduino Nano, I used a Arduino Uno to test the code and circuit. This is
+                    because
+                    the Uno has pre soldered female headers, making it easy to quickly test my circuit with ribbon
+                    cables.
+                    This prevent me from needing to solder anything before I was confident that my circuit would work.
+                </p>
+                <div class="col-5">
+                    <img src="../images/FinalProj/WorkingCricuit.JPG" alt="" class="stepimg">
+                    <p><i>Here is the working prototype</i></p>
+                </div>
+                <div class="col-1"></div>
+                <div class="col-5">
+                    <img src="../images/FinalProj/Broken wire 2.JPG" alt="" class="stepimg">
+                    <p><i>Jumper wires kept breaking because the wires are very thin. Soldering to the Neopixel is a
+                            very
+                            tedious process. Especially since I ended up cutting the strip into individual pixels and
+                            required
+                            to solder to everyone of them.</i></p>
+                </div>
+            </div>
 
 
             <h3 id="Code">Code</h3>
@@ -113,7 +133,284 @@
                 different designs and pattern. The second library is TM1637Display. It allows me to quickly and easily
                 display txet on Tm1637 7Segment display. The last library is the Arduino library. Without it you would
                 not be able to properly program and Arduino circuit.</p>
-            <hr />
+
+            <pre>
+<div class="code">
+    <code>
+        #include <Adafruit_NeoPixel.h>
+            #include <Arduino.h>
+            #include <TM1637Display.h>
+            
+            
+            // Module connection pins (Digital Pins)
+            #define CLK 2
+            #define DIO 3
+            #define NPX 4
+            #define EDT 5
+            #define HPLUS 6
+            #define MPLUS 7
+            
+            //Number of NeoPixels
+            #define PXNUM 12
+            
+            Adafruit_NeoPixel pixels = Adafruit_NeoPixel(PXNUM, NPX, NEO_GRB + NEO_KHZ800);
+            
+            //Colour On
+            int pxR = 1;
+            int pxG = 1;
+            int pxB = 1;
+            int rgbCombi = 1;
+            
+            //Current RGB Brightness 
+            int cR;
+            int cG;
+            int cB;
+            int stripColour;
+            int maxbrightpx; 
+            
+            //Tm brightness
+            int tm = 7;
+            
+            //brightness value
+            double bright = 1;
+            
+            TM1637Display display(CLK, DIO);
+            //int values
+            int H = 0;
+            int M = 0;
+            int S = 0;
+            
+            //pinvalues
+            int edit;
+            int hPlus;
+            int mPlus;
+            int editFlag = false;
+            
+            //display text
+            const uint8_t disEdit[] = {
+              SEG_A | SEG_D | SEG_E | SEG_F | SEG_G,            // E
+              SEG_B | SEG_C | SEG_D | SEG_E | SEG_G,            // d
+              SEG_E | SEG_F,                                    // i
+              SEG_D | SEG_E | SEG_F | SEG_G                     // t
+            };
+            
+            const uint8_t disDone[] = {
+              SEG_B | SEG_C | SEG_D | SEG_E | SEG_G,           // d
+              SEG_A | SEG_B | SEG_C | SEG_D | SEG_E | SEG_F,   // O
+              SEG_C | SEG_E | SEG_G,                           // n
+              SEG_A | SEG_D | SEG_E | SEG_F | SEG_G            // E
+            };
+            
+            const uint8_t tmRGB[] = {
+              SEG_E | SEG_G, //R
+              SEG_A | SEG_B | SEG_C | SEG_D | SEG_F | SEG_G, //G
+              SEG_C | SEG_D | SEG_E | SEG_F | SEG_G, //B
+              SEG_G //-
+            };
+            
+            const uint8_t brig[] ={
+              SEG_C | SEG_D | SEG_E | SEG_F | SEG_G, //B
+              SEG_E | SEG_G, //R
+              SEG_E | SEG_F,                                    // i
+              SEG_A | SEG_B | SEG_C | SEG_D | SEG_F | SEG_G //G
+            };
+            
+            
+            void setup()
+            {
+             
+              //NeoPixel 
+              pixels.begin();
+              
+              //TM1637
+              display.setBrightness(7);
+              display.showNumberDecEx(8888, 0b01000000, true, 4, 0);
+              delay(500);
+              display.clear();
+            
+              //PushButton
+              pinMode(EDT, INPUT_PULLUP);
+              pinMode(HPLUS, INPUT_PULLUP);
+              pinMode(MPLUS, INPUT_PULLUP);
+            
+              //Serial for testing
+                Serial.begin(9600);
+            }
+            
+            void loop()
+            {
+              //Till next second
+              int nextSec = 1000;
+            
+              
+              //Change Time
+              edit = digitalRead(EDT);
+              if(edit == 0){
+                Serial.print("in");
+                editFlag = true;
+                display.setSegments(disEdit,4,0);
+                delay(500);
+              }
+            
+              while(editFlag == true and edit == 1){
+                display.clear();
+                delay(5);
+                showTime();
+                delay(145);
+                
+                hPlus = digitalRead(HPLUS);
+                mPlus = digitalRead(MPLUS);
+            
+                //h++
+                if (hPlus == 0){
+                  if (H == 23){
+                    H = 0;
+                  } else {
+                    H++;
+                  }
+                  showTime();
+                }
+            
+                //m++
+                if (mPlus == 0){
+                  if (M == 59){
+                    M = 0;
+                  } else {
+                    M++;
+                  }
+                  showTime();
+                }
+                
+                edit = digitalRead(EDT);
+                if (edit == 0){
+                  editFlag = false;
+                  display.setSegments(disDone,4,0);
+                  delay(500);
+                }
+              }
+            
+            
+              //Run Clock Display and Pixels
+              //Set NeoPixel
+              showPx();
+              
+              //Set TM1637
+              showTime();
+            
+              //adjust brightness (HPLUS)
+              hPlus = digitalRead(HPLUS);
+                if (hPlus == 0){  
+                display.setSegments(brig,4,0);
+                delay(150);
+                nextSec -=150;
+                  if(bright == 1){
+                    bright = 0.5;
+                    showPx();
+                  } else {
+                    bright = 1;
+                  }
+                }
+            
+               //adjst Colour
+               mPlus = digitalRead(MPLUS);
+               if (mPlus == 0){
+                if (rgbCombi == 4){
+                  rgbCombi = 1;
+                } else {
+                  rgbCombi++;
+                }
+                display.setSegments(tmRGB,4,0);
+                delay(150);
+                nextSec -=150;
+                switch(rgbCombi){
+                  case 1: 
+                    pxR = 1;
+                    pxG = 1;
+                    pxB = 1;
+                    break;
+                  case 2: 
+                    pxR = 1;
+                    pxG = 0;
+                    pxB = 0;
+                    break;
+                  case 3: 
+                    pxR = 0;
+                    pxG = 1;
+                    pxB = 0;
+                    break;
+                  case 4: 
+                    pxR = 0;
+                    pxG = 0;
+                    pxB = 1;
+                    break;
+                }
+               }
+              
+            
+              //Time++
+              delay(nextSec);
+              S++;
+            
+              if (S == 60){
+                S = 0;
+                M ++;
+                if (M == 60) {
+                  M = 0;
+                  H ++;
+                  if (H == 24){
+                    H = 0;
+                  }
+                }
+              } 
+            }
+            
+            //Function to display itme on TM1637
+            void showTime() {
+              int displayTime = H*100 + M;
+              display.showNumberDecEx(displayTime, 0b01000000, true, 4, 0);
+            }
+            
+            //Fnc to display pixels
+            void showPx() {
+              
+              maxbrightpx = floor(S/5);
+              if(maxbrightpx != 0){
+              pixels.fill(pixels.Color(255*pxR*bright,255*pxG*bright,255*pxB*bright), 0, maxbrightpx);
+              } else {
+                pixels.clear();
+              }
+              
+              int brightlvl = (S - maxbrightpx*5)+1;
+              cR = (pow(3, brightlvl) - 1 )*pxR*bright;
+              cG = (pow(3, brightlvl) - 1 )*pxG*bright;
+              cB = (pow(3, brightlvl) - 1 )*pxB*bright;
+              
+              pixels.setPixelColor(maxbrightpx, cR, cG, cB); 
+              pixels.show();
+            }
+            
+    </code>
+</div>
+            </pre>
+
+            <div class="d-flex flex-wrap">
+                <div style="margin-right:15px">
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/y7OmlpgWAW0"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p><i>LEDs are lighting up every 5 seconds.</i></p>
+                </div>
+
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VrjKwbwlwdo"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <p><i>I got the LEDs to increase in brightness every 10 seconds.</i></p>
+                </div>
+            </div>
+            <hr>
 
             <h2 id="Model">Modelling</h2>
             <p>Using fusion 360, I modelled the clock. There is 3 main components to the clock. First it is the front
@@ -121,11 +418,24 @@
                 Lastly, it is the back. The back will contain multiple buttons and components to facilitate the
                 operation of the clock. On top of the main components, there is also a stand. The stand keeps the clock
                 at a optimal viewing angle when placed on a table.</p>
-            <i>Insert 3 img for front back and body</i>
-            <i>Insert 3D model</i>
+            <div class="d-flex flex-wrap">
+                <div style="margin-right:15px"><img src="../images/FinalProj/ModelFace.png" alt="" class="stepimg">
+                </div>
+                <div style="margin-right:15px"><img src="../images/FinalProj/ModelBody.png" alt="" class="stepimg">
+                </div>
+                <div style="margin-right:15px"> <img style="margin-right:15px" src="../images/FinalProj/ModelBack.png"
+                        alt="" class="stepimg "></div>
+                <div style="margin-right:15px"><img style="margin-right:15px" src="../images/FinalProj/ModelStand.png"
+                        alt="" class="stepimg "></div>
+            </div>
+            <iframe
+                src="https://ichat2704.autodesk360.com/shares/public/SH9285eQTcf875d3c539f92e4416302fda1a?mode=embed"
+                width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+                frameborder="0"></iframe>
+            <p><i>Here is the model</i></p>
             <hr />
 
-            <h2 id="#Print">3D Printing</h2>
+            <h2 id="Print">3D Printing</h2>
             <p>3D printing is very useful as it allowed me to create the body of the clock and its stand. It gives my a
                 lot of flexibility when it comes to creating different shapes and sizes.</p>
             <p>I printed the body of the clock. It was sliced specifically for the school printer. The settings used are
@@ -136,21 +446,99 @@
                 <li>10% infill</li>
             </ul>
             <p>Here is an image of the body.</p>
+            <img src="../images/FinalProj/3DBody.JPG" alt="" class="stepimg">
 
-            <p>I printed hte stand of the clock out of school with the help of a friend. The printer used is a Ender 3
-                v2. The setting used was:</p>
+            <p>I printed the stand of the clock out of school with the help of a friend (Credit: Lynn Myat Moe Aung).
+                The printer used is a Ender 3 v2. The setting used was:</p>
             <ul>
                 <li>0.2mm Layer Height</li>
                 <li>80mm/s</li>
                 <li>10% infill</li>
             </ul>
             <p>Here is some images of the stand.</p>
+            <img src="../images/FinalProj/3DStand.JPG" alt="" class="stepimg">
+
 
             <hr />
-            <h2 id="#Cut">Laser Cutting</h2>
+            <h2 id="Cut">Laser Cutting</h2>
             <p>For my project, I used the laser cutter to cut out the face and back of the clock. Since the laser
                 cutting machine is very precise, it is very useful to create holes the right size for buttons and other
-                electronic components. It is also very fast, making it ideal to quickly cut faces.</p>
+                electronic components. It is also very fast, making it ideal to quickly cut faces. Here is an image of
+                the front and back of the design.</p>
+            <img src="../images/FinalProj/LaserCut.jpg" alt="" class="stepimg">
+
+            <p>After connecting the circuits, and trying to close the clock. I realise that although the thickness of
+                the clock was enough to fit my components, the wires ended up making it very hard to close. One of the
+                ways I remedied it was to cut out some acrylic rings to add additional thickness to the body, giving
+                more space for the wires to fit. You can see the ring on the side view of the final product. I created
+                the rings by using the front face of the body to create a DXF.</p>
+            <img src="../images/FinalProj/Side.JPG" alt="" class="stepimg">
+            <hr>
+
+            <h2 id="Final">Final Product</h2>
+            <p>Here is the clock in all its glory. I have embedded a video to present the clock and its feature to you.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tUenoqKDqP0"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+
+            <h3 id="Features">Features</h3>
+            <p>Here are some images to show off the clock</p>
+            <p><b>Colours</b></p>
+            <div class="d-flex flex-wrap">
+                <div style="margin-right:15px">
+                    <img src="../images/FinalProj/White.JPG" alt="" class="stepimg">
+                    <p><i>LEDs in White</i></p>
+                </div>
+                <div style="margin-right:15px">
+                    <img src="../images/FinalProj/Blue.JPG" alt="" class="stepimg">
+                    <p><i>LEDs in Blue</i></p>
+                </div>
+                <div style="margin-right:15px">
+                    <img src="../images/FinalProj/Red.JPG" alt="" class="stepimg">
+                    <p><i>LEDs in Red</i></p>
+                </div>
+                <div style="margin-right:15px">
+                    <img src="../images/FinalProj/Green.JPG" alt="" class="stepimg">
+                    <p><i>LEDs in Green</i></p>
+                </div>
+            </div>
+            <p><b>Brightness</b></p>
+            <div class="d-flex flex-wrap">
+                <div style="margin-right:15px">
+                    <img src="../images/FinalProj/Brighter.JPG" alt="" class="stepimg">
+                    <p><i>LEDs at default brightness</i></p>
+                </div>
+                <div style="margin-right:15px">
+                    <img src="../images/FinalProj/Darker.JPG" alt="" class="stepimg">
+                    <p><i>LEDs dimmed</i></p>
+                </div>
+            </div>
+            <p>The difference is more noticeable in person. (Source: Trust me bro)</p>
+
+            <hr>
+
+            <h2 id="Down">Downloads</h2>
+            <p>Here are the download link. Download whichever you would like to use.</p>
+            <h3 id="dModel">Models</h3>
+            <div class="d-flex flex-wrap">
+                <a href="../FPDownload/Models/Clock.3mf" download="Clock" class="btn btn-primary">Full Clock</a>
+                <a href="../FPDownload/Models/Body.3mf" download="Body" class="btn btn-primary">Body Only</a>
+                <a href="../FPDownload/Models/Stand.3mf" download="Stand" class="btn btn-primary">Stand Only</a>
+            </div><br><br>
+            <h3 id="dDXF">DXF</h3>
+            <p>Take note that some of the DXF contain construction lines. Delete them before cutting.</p>
+            <div class="d-flex flex-wrap">
+                <a href="../FPDownload/DXF/FRONT DXF.dxf" download="Front" class="btn btn-primary">Front Face</a>
+                <a href="../FPDownload/DXF/BODY DXF.dxf" download="Body" class="btn btn-primary">Body Face</a>
+                <a href="../FPDownload/DXF/BACK DXF.dxf" download="Back" class="btn btn-primary">Back Face</a>
+            </div><br><br>
+            <h3 id="dCode">Code</h3>
+            <div class="d-flex flex-wrap">
+                <a href="../FPDownload/Clock_Default/Clock_Default.ino" download="Clock_Code"
+                    class="btn btn-primary">Clock Code</a>
+            </div>
         </div>
         <!-- Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

@@ -12065,7 +12065,7 @@ h1.header, .header.h1 {
   border: #202020 solid 2px;
   margin-bottom: 30px;
   max-width: 75%;
-  max-height: 850px;
+  max-height: 500px;
   display: block;
   -webkit-box-shadow: 3px 3px 3px #b0b0b0;
           box-shadow: 3px 3px 3px #b0b0b0;
@@ -12081,5 +12081,14 @@ h1.header, .header.h1 {
 
 .blist > li {
   list-style-type: none;
+}
+
+.btn {
+  width: 130px;
+  margin-right: 15px;
+}
+
+pre {
+  background-color: turquoise;
 }
 /*# sourceMappingURL=style.css.map */
