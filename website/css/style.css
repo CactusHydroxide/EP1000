@@ -12069,8 +12069,10 @@ h1.header, .header.h1 {
   display: block;
   -webkit-box-shadow: 3px 3px 3px #b0b0b0;
           box-shadow: 3px 3px 3px #b0b0b0;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+.videos {
+  max-width: 75%;
 }
 
 .blist {
